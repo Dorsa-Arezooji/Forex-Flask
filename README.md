@@ -41,7 +41,7 @@ $ sudo docker run --name cassandra-container -p 9042:9042 -d cassandra
 ```
 $ sudo docker exec -it cassandra-container cqlsh 
 ```
-3. Now using cqlsh create a namespace and then the database:
+3. Now using cqlsh create a designated keyspace and then the database:
 ```
 cqlsh> CREATE KEYSPACE journal WITH REPLICATION = {'class' : 'SimpleStrategy', 'replication_factor' : 1}; 
 ```
