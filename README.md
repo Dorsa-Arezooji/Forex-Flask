@@ -1,7 +1,4 @@
 # Forex-Flask
-
-## Overview
-
 This is a cloud-based RESTful API that has some useful functionalities for forex trading including:
 
 * Forex
@@ -17,3 +14,42 @@ This is a cloud-based RESTful API that has some useful functionalities for forex
 
 ## Documentation
 
+### 1. Deployment
+This app is deployed using AWS. Since there isn't a lot of computationally heavy tasks involved, a t2.medium instance would do just fine.
+
+**Docker**
+
+Here, Docker is used to build an image ot the app and containerize it. 
+1. In the terminal, navigate to the folder where you have the app files and build the app image:
+
+```
+$ sudo docker build . --tag=forex_app_image:v1
+```
+2. If everything goes well, now you can deploy the app:
+```
+$ sudo docker run -p 80:80 forex_app_image:v1
+```
+
+**Cassandra**
+
+In this app, Cassandra is used to handle the database. Inside the AWS instance, run a Cassandra container. According to the docs, cassandra uses port 9042 for native protocol clients.
+1. In the terminal, navigate to the folder where you have the app files and run a cassandra container:
+```
+$ sudo docker run --name cassandra-container -p 9042:9042 -d cassandra 
+```
+2. To be able to run commands inside the cassandra container:
+```
+$ sudo docker exec -it cassandra-container cqlsh 
+```
+3. Now using cqlsh create a namespace and then the database:
+```
+cqlsh> CREATE KEYSPACE journal WITH REPLICATION = {'class' : 'SimpleStrategy', 'replication_factor' : 1}; 
+```
+```
+cqlsh> CREATE TABLE journal.users (Name text, UserName text, PassWord text, PRIMARY KEY (Name, UserName)); 
+ ```
+```
+cqlsh> CREATE TABLE journal.entry_records (UserName text, id int, pair text, type text, volume float, start_time text, close_time text, start_price float, close_price float, sgn int, profit float, PRIMARY KEY (UserName, id)); 
+```
+
+### 2. How to use
