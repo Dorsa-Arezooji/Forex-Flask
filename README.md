@@ -46,10 +46,10 @@ $ sudo docker exec -it cassandra-container cqlsh
 cqlsh> CREATE KEYSPACE journal WITH REPLICATION = {'class' : 'SimpleStrategy', 'replication_factor' : 1}; 
 ```
 ```
-cqlsh> CREATE TABLE journal.users (Name text, UserName text, PassWord text, PRIMARY KEY (Name, UserName)); 
+cqlsh> CREATE TABLE journal.users (name text, username text, password text, apikey text, PRIMARY KEY (username, apikey)); 
  ```
 ```
-cqlsh> CREATE TABLE journal.entry_records (UserName text, id int, pair text, type text, volume float, start_time text, close_time text, start_price float, close_price float, sgn int, profit float, PRIMARY KEY (UserName, id)); 
+cqlsh> CREATE TABLE journal.entry_records (apikey text, username text, id int, pair text, type text, volume float, start_time text, close_time text, start_price float, close_price float, sgn int, profit float, PRIMARY KEY (apikey, username, id)); 
 ```
 
 ### 2. How to use
