@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/f_nicepage.css")}}" media="screen">
+<link rel="stylesheet" href="{{ url_for('static', filename="css/Journal.css")}}" media="screen">
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename="js/f_jquery-1.9.1.min.js")}}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename="js/f_nicepage.js")}}" defer=""></script>
+    <link id="u-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    
+    
+    
+    <script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Dorsa1",
+    "url": "index.html"
+}</script>
+    <meta property="og:title" content="Forex">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+  </head>
+  <body class="u-body">
+    <section class="u-clearfix u-section-1" id="sec-c3e7">
+      <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout" style="">
+          <div class="u-layout-row" style="">
+            <div class="u-container-style u-image u-layout-cell u-right-cell u-shading u-size-60 u-size-xs-60 u-image-1" data-image-width="1280" data-image-height="853">
+              <div class="u-container-layout u-container-layout-1">
+                <a href="/" class="u-border-3 u-border-palette-5-light-3 u-border-radius-10 u-btn u-btn-round u-button-style u-custom-font u-font-roboto-slab u-none u-btn-1" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Home</a>
+                    <p class="u-custom-font u-heading-font u-text u-text-2" style="font-size:18px">
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <p class="u-text u-text-default u-text-1">Register
+                      {% if msg %} {{ msg }} {% endif %}</p>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                    </p>
+                    <div class="u-form u-form-1">
+                      <form action="/register/" method="POST" style="color: #8D8C8C">
+                        {% if form %}
+                        {{ form.name.label() }}
+                        <br>
+                        {{ form.name(size=30) }}
+                        <br>
+                        <br>
+			{{ form.username.label() }}
+                        <br>
+                        {{ form.username(size=30) }}
+                        <br>
+                        <br>
+                        {{ form.password.label() }}
+                        <br>
+                        {{ form.password(size=30) }}
+                        <br>
+                        {{ form.csrf_token }}
+                        {% endif %}
+                        <input class="u-border-radius-10 u-btn u-btn-round u-btn-submit u-button-style u-custom-color-1 u-btn-2" type="submit" name="add button" value="register">
+                      </form>
+                    </div>
+                  </div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

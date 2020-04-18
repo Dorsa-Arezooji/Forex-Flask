@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>💸Forex💸</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/f_nicepage.css")}}" media="screen">
+<link rel="stylesheet" href="{{ url_for('static', filename="css/Forex.css")}}" media="screen">
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename="js/f_jquery-1.9.1.min.js")}}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename="js/f_nicepage.js")}}" defer=""></script>
+    <link id="u-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Dorsa1",
+		"url": "index.html"
+}</script>
+    <meta property="og:title" content="Forex">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+  </head>
+  <body class="u-body">
+    <section class="u-clearfix u-section-1" id="sec-c3e7">
+      <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout" style="">
+          <div class="u-layout-row" style="">
+            <div class="u-container-style u-image u-layout-cell u-right-cell u-shading u-size-60 u-size-xs-60 u-image-1" data-image-width="1280" data-image-height="853">
+              <div class="u-container-layout u-container-layout-1">
+                <a href="/" class="u-border-3 u-border-palette-5-light-3 u-border-radius-10 u-btn u-btn-round u-button-style u-custom-font u-font-roboto-slab u-none u-btn-1" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Home</a>
+                <div class="u-align-left u-black u-container-style u-group u-opacity u-opacity-65 u-group-1">
+                  <div class="u-container-layout u-container-layout-2">
+                    <div class="u-border-3 u-border-palette-3-light-1 u-border-radius-10 u-opacity u-opacity-20 u-palette-3-dark-2 u-shape u-shape-round u-shape-1"></div>
+                    <p class="u-text u-text-default u-text-1">Live Forex Data</p>
+                    <p class="u-custom-font u-heading-font u-text u-text-2" style="font-size:18px;">
+                      Ticker: {% if resultslive %}
+                      {{ resultslive['ticker'] }}
+                      {% endif %}
+                      <br>Bid: {% if resultslive %}
+                      {{ resultslive['bid'] }}
+                      {% endif %}
+                      <br>Ask: {% if resultslive %}
+                      {{ resultslive['ask'] }}
+                      {% endif %}
+                      <br>Open: {% if resultslive %}
+                      {{ resultslive['open'] }}
+                      {% endif %}
+                      <br>Low: {% if resultslive %}
+                      {{ resultslive['low'] }}
+                      {% endif %}
+                      <br>High: {% if resultslive %}
+                      {{ resultslive['high'] }}
+                      {% endif %}
+                      <br>Changes: {% if resultslive %}
+                      {{ resultslive['changes'] }}
+                      {% endif %}
+                      <br>Time: {% if resultslive %}
+                      {{ resultslive['date'] }}
+                      {% endif %}
+                      <br>
+                    </p>
+                    <div class="u-form u-form-1">
+                      <form action="/forex/" method="POST" style="color: #8D8C8C">
+                        {{ formlive.message.label() }}
+                        <br>
+                        {{ formlive.message(size=30) }}
+                        {{ formlive.csrf_token }}
+                        <input class="u-border-radius-10 u-btn u-btn-round u-btn-submit u-button-style u-custom-color-1 u-btn-2" type="submit" name="submit button">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-90 u-section-2" id="carousel_cc5b">
+      <div class="u-clearfix u-gutter-0 u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout" style="">
+          <div class="u-layout-row" style="">
+            <div class="u-container-style u-image u-layout-cell u-right-cell u-shading u-size-60 u-size-xs-60 u-image-1" data-image-width="1280" data-image-height="960">
+              <div class="u-container-layout u-valign-middle u-container-layout-1">
+                <div class="u-align-left u-black u-container-style u-group u-opacity u-opacity-65 u-group-1">
+                  <div class="u-container-layout u-container-layout-2">
+                    <div class="u-border-3 u-border-palette-3-light-1 u-border-radius-10 u-opacity u-opacity-20 u-palette-3-dark-2 u-shape u-shape-round u-shape-1"></div>
+                    <p class="u-text u-text-default u-text-1">Historical Forex Data</p>
+                    <div class="u-form u-form-1">
+                      <form action="/forex/" method="POST" style="color: #8D8C8C">
+                        {{ formhist.message_h.label() }}
+                        <br>
+                        {{ formhist.message_h(size=30) }}
+                        <br>
+                        {{ formhist.date.label() }}
+                        <br>
+                        {{ formhist.date(size=30) }}
+                        {{ formhist.csrf_token }}
+                        <br>
+                        <input class="u-border-radius-10 u-btn u-btn-round u-btn-submit u-button-style u-custom-color-1 u-btn-2" type="submit" name="submit button">
+                      </form>
+                    </div>
+                    <p class="u-custom-font u-heading-font u-text u-text-2" style="font-size:18px">{% if resultshist %}
+                      {{ resultshist[0]['label'] }}
+                      {% endif %}
+                      <br>Open: {% if resultshist %}
+                      {{ resultshist[0]['open'] }}
+                      {% endif %}
+                      <br>High: {% if resultshist %}
+                      {{ resultshist[0]['high'] }}
+                      {% endif %}
+                      <br>Low: {% if resultshist %}
+                      {{ resultshist[0]['low'] }}
+                      {% endif %}
+                      <br>Close: {% if resultshist %}
+                      {{ resultshist[0]['close'] }}
+                      {% endif %}
+                      <br>Adj close: {% if resultshist %}
+                      {{ resultshist[0]['adjClose'] }}
+                      {% endif %}
+                      <br>Change: {% if resultshist %}
+                      {{ resultshist[0]['changePercent'] }} %
+                      {% endif %}
+                      <br>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <span style="height: 64px; width: 64px; margin-left: 0; margin-right: auto; margin-top: 0; background-image: none; right: 20px; bottom: 20px" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-palette-3-dark-2 u-spacing-15" data-href="#">
+      <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+      <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+    </span>
+  </body>
+</html>
