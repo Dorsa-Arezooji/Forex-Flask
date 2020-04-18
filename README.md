@@ -51,7 +51,7 @@ cqlsh> CREATE TABLE journal.users (name text, email text, password text, apikey 
 cqlsh> CREATE TABLE journal.entry_records (apikey text, api__id text, id text, pair text, type text, volume text, start_time text, close_time text, start_price text, close_price text, profit text, PRIMARY KEY (apikey, api__id, id)); 
 ```
 
-** Kubernetes **
+**Kubernetes**
 
 1. Install Kubernetes by issuing:
 ```
