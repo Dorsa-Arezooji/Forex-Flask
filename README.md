@@ -51,7 +51,7 @@ cqlsh> CREATE TABLE journal.users (name text, email text, password text, apikey 
 cqlsh> CREATE TABLE journal.entry_records (apikey text, api__id text, id text, pair text, type text, volume text, start_time text, close_time text, start_price text, close_price text, profit text, PRIMARY KEY (apikey, api__id, id)); 
 ```
 
-** Kubernetes**
+** Kubernetes **
 
 1. Install Kubernetes by issuing:
 ```
@@ -85,5 +85,5 @@ curl -i -H "Content-Type: application/json" -X DELETE -d '{"apikey":"9029154e695
 
 * update entry:
 ``` 
-curl -i -H "Content-Type: application/json" -X PUT -d '{"apikey":"9029154e6954208610d269f43f649ba34bbf3cf2e1978fcc978ff77d7d387ddb","id":"001","pair":"-pair-","type":"-type-","volume":"-vol-","open_time":"-ot-","close_time":"ct","open_price":"-po-","close_price":"-cp-"}' http://ec2-100-26-191-173.compute-1.amazonaws.com/update_entry/
+curl -i -H "Content-Type: application/json" -X PUT -d '{"apikey":"9029154e6954208610d269f43f649ba34bbf3cf2e1978fcc978ff77d7d387ddb","id":"001","pair":"-pair-","type":"-type-","volume":"-vol-","open_time":"-ot-","close_time":"-ct-","open_price":"-po-","close_price":"-cp-"}' http://ec2-100-26-191-173.compute-1.amazonaws.com/update_entry/
 ```
