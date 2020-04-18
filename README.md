@@ -21,7 +21,6 @@ This app is deployed using AWS. Since there isn't a lot of computationally heavy
 
 Here, Docker is used to build an image ot the app and containerize it. 
 1. In the terminal, navigate to the folder where you have the app files and build the app image:
-
 ```
 $ sudo docker build . --tag=forex_app_image:v1
 ```
@@ -46,10 +45,45 @@ $ sudo docker exec -it cassandra-container cqlsh
 cqlsh> CREATE KEYSPACE journal WITH REPLICATION = {'class' : 'SimpleStrategy', 'replication_factor' : 1}; 
 ```
 ```
-cqlsh> CREATE TABLE journal.users (name text, username text, password text, apikey text, PRIMARY KEY (username, apikey)); 
+cqlsh> CREATE TABLE journal.users (name text, email text, password text, apikey text, PRIMARY KEY (email, apikey)); 
  ```
 ```
-cqlsh> CREATE TABLE journal.entry_records (apikey text, id text, pair text, type text, volume float, start_time text, close_time text, start_price float, close_price float, profit float, PRIMARY KEY (apikey, id)); 
+cqlsh> CREATE TABLE journal.entry_records (apikey text, api__id text, id text, pair text, type text, volume text, start_time text, close_time text, start_price text, close_price text, profit text, PRIMARY KEY (apikey, api__id, id)); 
+```
+
+** Kubernetes**
+
+1. Install Kubernetes by issuing:
+```
+$ sudo snap install microk8s --classic
+```
+If the installation was successful, you'll get:
+```
+microk8s v1.18.1 from Canonical✓ installed
+```
+2. Create the pod:
+```
+$ sudo microk8s.kubectl run forex-deployment --image=forex_app_image:v1 --port=80
+```
+If all goes well, you'll see:
+```
+pod/forex-deployment created
+```
+3. To see the pods created:
+```
+$ sudo microk8s.kubectl get pods
+NAME               READY   STATUS             RESTARTS   AGE
+forex-deployment   0/1     ImagePullBackOff   0          92s
 ```
 
 ### 2. How to use
+
+* delete entry:
+``` 
+curl -i -H "Content-Type: application/json" -X DELETE -d '{"apikey":"9029154e6954208610d269f43f649ba34bbf3cf2e1978fcc978ff77d7d387ddb","id":"001"}' http://ec2-100-26-191-173.compute-1.amazonaws.com/del_entry/
+```
+
+* update entry:
+``` 
+curl -i -H "Content-Type: application/json" -X PUT -d '{"apikey":"9029154e6954208610d269f43f649ba34bbf3cf2e1978fcc978ff77d7d387ddb","id":"001","pair":"-pair-","type":"-type-","volume":"-vol-","open_time":"-ot-","close_time":"ct","open_price":"-po-","close_price":"-cp-"}' http://ec2-100-26-191-173.compute-1.amazonaws.com/update_entry/
+```
