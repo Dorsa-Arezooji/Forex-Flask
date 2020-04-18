@@ -12,6 +12,15 @@ This is a cloud-based RESTful API that has some useful functionalities for forex
   * Calculate profits from each trade
   * Delete or update journal entries
 
+**Features**
+- dinamically generated REST API
+- HTTP services: GET, POST, PUT, DELETE
+- use of an external API
+- cassandra database
+- load balancing implementation
+- hash-based authentication
+- implementation of user accounts
+
 ## Documentation
 
 ### 1. Deployment
@@ -78,12 +87,14 @@ forex-deployment   0/1     ImagePullBackOff   0          92s
 
 ### 2. How to use
 
+
+
 * delete entry:
 ``` 
-curl -i -H "Content-Type: application/json" -X DELETE -d '{"apikey":"9029154e6954208610d269f43f649ba34bbf3cf2e1978fcc978ff77d7d387ddb","id":"001"}' http://ec2-100-26-191-173.compute-1.amazonaws.com/del_entry/
+curl -i -H "Content-Type: application/json" -X DELETE -d '{"apikey":"****","id":"****"}' http://ec2-100-26-191-173.compute-1.amazonaws.com/del_entry/
 ```
 
 * update entry:
 ``` 
-curl -i -H "Content-Type: application/json" -X PUT -d '{"apikey":"9029154e6954208610d269f43f649ba34bbf3cf2e1978fcc978ff77d7d387ddb","id":"001","pair":"-pair-","type":"-type-","volume":"-vol-","open_time":"-ot-","close_time":"-ct-","open_price":"-po-","close_price":"-cp-"}' http://ec2-100-26-191-173.compute-1.amazonaws.com/update_entry/
+curl -i -H "Content-Type: application/json" -X PUT -d '{"apikey":"****","id":"****","pair":"****","type":"****","volume":"****","open_time":"****","close_time":"****","open_price":"****","close_price":"****"}' http://ec2-100-26-191-173.compute-1.amazonaws.com/update_entry/
 ```
