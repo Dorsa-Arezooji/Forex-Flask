@@ -90,7 +90,7 @@ forex-deployment   0/1     ImagePullBackOff   0          92s
 
 **terminal**
 
-Since the DELETE and PUT methods aren't supported in html, you can use your terminal to execute the following commands.
+Since the DELETE and PUT methods aren't supported in html, you can use your terminal to execute the following commands:
 
 * delete entry:
 ``` 
@@ -104,7 +104,8 @@ curl -i -H "Content-Type: application/json" -X PUT -d '{"apikey":"****","id":"**
 
 **website**
 
-Using the website is pretty simple and clear.
+Using the website is pretty simple and clear:
+
 ![](https://github.com/Dorsa-Arezooji/Forex-Flask/blob/master/screenshots/Screenshot%20from%202020-04-19%2000-38-52.png)
 ![](https://github.com/Dorsa-Arezooji/Forex-Flask/blob/master/screenshots/Screenshot%20from%202020-04-19%2000-39-53.png)
 ![](https://github.com/Dorsa-Arezooji/Forex-Flask/blob/master/screenshots/Screenshot%20from%202020-04-19%2000-40-45.png)
