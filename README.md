@@ -88,10 +88,6 @@ forex-deployment   0/1     ImagePullBackOff   0          92s
 
 ### 2. How to use
 
-**website**
-
-Using the website is pretty simple and clear.
-
 **terminal**
 
 Since the DELETE and PUT methods aren't supported in html, you can use your terminal to execute the following commands.
@@ -105,3 +101,11 @@ curl -i -H "Content-Type: application/json" -X DELETE -d '{"apikey":"****","id":
 ``` 
 curl -i -H "Content-Type: application/json" -X PUT -d '{"apikey":"****","id":"****","pair":"****","type":"****","volume":"****","open_time":"****","close_time":"****","open_price":"****","close_price":"****"}' http://ec2-100-26-191-173.compute-1.amazonaws.com/update_entry/
 ```
+
+**website**
+
+Using the website is pretty simple and clear.
+![]()
+![]()
+![]()
+![]()
