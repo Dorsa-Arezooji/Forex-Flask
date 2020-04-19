@@ -94,12 +94,12 @@ Since the DELETE and PUT methods aren't supported in html, you can use your term
 
 * delete entry:
 ``` 
-curl -i -H "Content-Type: application/json" -X DELETE -d '{"apikey":"****","id":"****"}' http://ec2-100-26-191-173.compute-1.amazonaws.com/del_entry/
+curl -i -H "Content-Type: application/json" -X DELETE -d '{"apikey":"****","id":"****"}' http://ec2-***-**-***-***.compute-1.amazonaws.com/del_entry/
 ```
 
 * update entry:
 ``` 
-curl -i -H "Content-Type: application/json" -X PUT -d '{"apikey":"****","id":"****","pair":"****","type":"****","volume":"****","open_time":"****","close_time":"****","open_price":"****","close_price":"****"}' http://ec2-100-26-191-173.compute-1.amazonaws.com/update_entry/
+curl -i -H "Content-Type: application/json" -X PUT -d '{"apikey":"****","id":"****","pair":"****","type":"****","volume":"****","open_time":"****","close_time":"****","open_price":"****","close_price":"****"}' http://ec2-***-**-***-***.compute-1.amazonaws.com/update_entry/
 ```
 
 **website**
