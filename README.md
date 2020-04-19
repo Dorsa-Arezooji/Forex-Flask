@@ -1,4 +1,4 @@
-# Forex-Flask
+# Forex-Web-App
 This is a cloud-based RESTful API that has some useful functionalities for forex trading including:
 
 * Forex
