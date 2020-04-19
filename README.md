@@ -1,4 +1,4 @@
-# Forex-Web-App
+# Forex Web Application
 This is a cloud-based RESTful API that has some useful functionalities for forex trading including:
 
 * Forex
