@@ -105,7 +105,13 @@ curl -i -H "Content-Type: application/json" -X PUT -d '{"apikey":"****","id":"**
 **website**
 
 Using the website is pretty simple and clear.
-![]()
-![]()
-![]()
-![]()
+![](https://github.com/Dorsa-Arezooji/Forex-Flask/blob/master/screenshots/Screenshot%20from%202020-04-19%2000-38-52.png)
+![](https://github.com/Dorsa-Arezooji/Forex-Flask/blob/master/screenshots/Screenshot%20from%202020-04-19%2000-39-53.png)
+![](https://github.com/Dorsa-Arezooji/Forex-Flask/blob/master/screenshots/Screenshot%20from%202020-04-19%2000-40-45.png)
+![](https://github.com/Dorsa-Arezooji/Forex-Flask/blob/master/screenshots/Screenshot%20from%202020-04-19%2000-41-17.png)
+![](https://github.com/Dorsa-Arezooji/Forex-Flask/blob/master/screenshots/Screenshot%20from%202020-04-19%2000-42-27.png)
+![](https://github.com/Dorsa-Arezooji/Forex-Flask/blob/master/screenshots/Screenshot%20from%202020-04-19%2000-43-22.png)
+![](https://github.com/Dorsa-Arezooji/Forex-Flask/blob/master/screenshots/Screenshot%20from%202020-04-19%2000-44-13.png)
+![](https://github.com/Dorsa-Arezooji/Forex-Flask/blob/master/screenshots/Screenshot%20from%202020-04-19%2000-44-52.png)
+![](https://github.com/Dorsa-Arezooji/Forex-Flask/blob/master/screenshots/Screenshot%20from%202020-04-19%2000-48-33.png)
+![](https://github.com/Dorsa-Arezooji/Forex-Flask/blob/master/screenshots/Screenshot%20from%202020-04-19%2000-48-46.png)
