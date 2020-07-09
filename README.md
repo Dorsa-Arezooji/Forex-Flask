@@ -14,7 +14,7 @@ This is a cloud-based RESTful API that has some useful functionalities for forex
 
 **Features**
 
-- dinamically generated REST API
+- dynamic REST API
 - HTTP services: GET, POST, PUT, DELETE
 - use of an external API
 - cassandra database
