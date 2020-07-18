@@ -107,6 +107,7 @@ curl -i -H "Content-Type: application/json" -X PUT -d '{"apikey":"****","id":"**
 Using the website is pretty simple and clear:
 
 ![](https://github.com/Dorsa-Arezooji/Forex-Flask/blob/master/screenshots/Screenshot%20from%202020-04-19%2000-38-52.png)
+<img src="screenshots/Screenshot%20from%202020-04-19%2000-38-52.png" width="800">
 ![](https://github.com/Dorsa-Arezooji/Forex-Flask/blob/master/screenshots/Screenshot%20from%202020-04-19%2000-39-53.png)
 ![](https://github.com/Dorsa-Arezooji/Forex-Flask/blob/master/screenshots/Screenshot%20from%202020-04-19%2000-40-45.png)
 ![](https://github.com/Dorsa-Arezooji/Forex-Flask/blob/master/screenshots/Screenshot%20from%202020-04-19%2000-41-17.png)
