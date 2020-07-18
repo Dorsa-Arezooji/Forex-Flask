@@ -106,13 +106,13 @@ curl -i -H "Content-Type: application/json" -X PUT -d '{"apikey":"****","id":"**
 
 Using the website is pretty simple and clear:
 
-<img src="screenshots/Screenshot%20from%202020-04-19%2000-38-52.png" width="800">
-<img src="screenshots/Screenshot%20from%202020-04-19%2000-39-53.png" width="800">
-<img src="screenshots/Screenshot%20from%202020-04-19%2000-40-45.png" width="800">
-<img src="screenshots/Screenshot%20from%202020-04-19%2000-41-17.png" width="800">
-<img src="screenshots/Screenshot%20from%202020-04-19%2000-42-27.png" width="800">
-<img src="screenshots/Screenshot%20from%202020-04-19%2000-43-22.png" width="800">
-<img src="screenshots/Screenshot%20from%202020-04-19%2000-44-13.png" width="800">
-<img src="screenshots/Screenshot%20from%202020-04-19%2000-44-52.png" width="800">
-<img src="screenshots/Screenshot%20from%202020-04-19%2000-48-33.png" width="800">
-<img src="screenshots/Screenshot%20from%202020-04-19%2000-48-46.png" width="800">
+<img src="screenshots/Screenshot%20from%202020-04-19%2000-38-52.png">
+<img src="screenshots/Screenshot%20from%202020-04-19%2000-39-53.png">
+<img src="screenshots/Screenshot%20from%202020-04-19%2000-40-45.png">
+<img src="screenshots/Screenshot%20from%202020-04-19%2000-41-17.png">
+<img src="screenshots/Screenshot%20from%202020-04-19%2000-42-27.png">
+<img src="screenshots/Screenshot%20from%202020-04-19%2000-43-22.png">
+<img src="screenshots/Screenshot%20from%202020-04-19%2000-44-13.png">
+<img src="screenshots/Screenshot%20from%202020-04-19%2000-44-52.png">
+<img src="screenshots/Screenshot%20from%202020-04-19%2000-48-33.png">
+<img src="screenshots/Screenshot%20from%202020-04-19%2000-48-46.png">
